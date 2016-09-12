@@ -6,38 +6,37 @@
 
 template<class ItemType>
 class MagicBox : public PlainBox<ItemType> {
-private:
-    bool firstItemStored;
+ private:
+  bool firstItemStored;
 
-public:
-    MagicBox();
+ public:
+  MagicBox();
 
-    MagicBox(const ItemType &theItem);
+  MagicBox(const ItemType &theItem);
 
-    void setItem(const ItemType &theItem);
+  void setItem(const ItemType &theItem);
 
 };  // end MagicBox
 
 template<class ItemType>
-MagicBox<ItemType>::MagicBox() {
-    PlainBox<ItemType>();
-    firstItemStored = false;    // Box has no magic initially
+MagicBox<ItemType>::MagicBox() :PlainBox<ItemType>() {
+  firstItemStored = false;    // Box has no magic initially
 }   // end default constructor
 
 template<class ItemType>
 MagicBox<ItemType>::MagicBox(const ItemType &theItem) {
-    firstItemStored = false;    // Box has no magic initially
+  firstItemStored = false;    // Box has no magic initially
 
-    setItem(theItem);
+  setItem(theItem);
 // Box has magic now
 }   // end constructor
 
 template<class ItemType>
 void MagicBox<ItemType>::setItem(const ItemType &theItem) {
-    std::cout<<"Setting item "<<theItem<<" via Magic box"<<std::endl;
-    if (!firstItemStored) {
-        PlainBox<ItemType>::setItem(theItem);
-        firstItemStored = true;    // Box now has magic
-    }    // end if
+  if (!firstItemStored) {
+    PlainBox<ItemType>::setItem(theItem);
+    firstItemStored = true;    // Box now has magic
+  }    // end if
+  std::cout << "Setting item " << theItem << " via Magic box" << std::endl;
 }   // end setItem
 #endif

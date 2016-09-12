@@ -19,8 +19,7 @@ public:
 };  // end MagicBox
 
 template<class ItemType>
-MagicBox<ItemType>::MagicBox() {
-    PlainBox<ItemType>();
+MagicBox<ItemType>::MagicBox() :PlainBox<ItemType>(){
     firstItemStored = false;    // Box has no magic initially
 }   // end default constructor
 

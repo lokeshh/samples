@@ -1,6 +1,6 @@
-#Welcome to CSC340-3: Programming Methodology!
+# Welcome to CSC340-3: Programming Methodology!
 
-##Class Repository for CSC340-03 at San Francisco State University
+## Class Repository for CSC340-03 at San Francisco State University
 
 
 Textbook: Data abstraction and problem solving with C++, by Frank M. Carrano, 7th Edition, Addison Wesley 
